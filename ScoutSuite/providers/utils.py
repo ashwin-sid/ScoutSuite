@@ -20,6 +20,7 @@ def get_non_provider_id(name):
 
 async def run_concurrently(function, backoff_seconds=15):
     try:
+        print_info(function)
         async with asyncio.get_event_loop().throttler:
             return await run_function_concurrently(function)
     except Exception as e:
