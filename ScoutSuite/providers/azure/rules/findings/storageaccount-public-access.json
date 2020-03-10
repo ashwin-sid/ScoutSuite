@@ -1,0 +1,10 @@
+{
+    "dashboard_name": "Accounts",
+    "description": "Public Storge Accounts",
+    "rationale": "<b>Description:</b><br><br>Ensure that  there is firewall for storage accounts.<br><br><b>References:</b><ul><li>CIS Microsoft Azure Foundations --v1.1.0 3.1</li></ul>",
+    "path": "storageaccounts.subscriptions.id.storage_accounts.id",
+    "conditions": [ "and",
+        [ "storageaccounts.subscriptions.id.storage_accounts.id.public_traffic_allowed", "true", "" ]
+    ],
+    "id_suffix": "public_traffic_allowed"
+}
